@@ -18,6 +18,7 @@ import javafx.stage.Stage;
 
 import java.io.File;
 import java.io.IOException;
+import java.net.URL;
 import java.util.Objects;
 
 public class MainApplication extends Application {
@@ -124,14 +125,26 @@ public class MainApplication extends Application {
         }
     }
 
-
-
-
-    MainController controller = new MainController();
+    public static URL getView(String name){
+        return MainApplication.class.getResource("windows/" + name + ".fxml");
+    }
 
     public static File getFile(String fileName) {
         return new File(Objects.requireNonNull(MainApplication.class.getResource(fileName)).getPath());
     }
+
+    public static double getWidth() {
+        return 1280;
+    }
+
+    public static double getHeight() {
+        return 720;
+    }
+
+    public static int msRate() {
+        return 16;
+    }
+
     public static Image getImage(String fileName) {
         return new Image(getFile(fileName).getPath());
     }
