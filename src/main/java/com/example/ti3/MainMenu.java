@@ -5,15 +5,12 @@ import javafx.application.Application;
 import javafx.fxml.FXML;
 import javafx.fxml.FXMLLoader;
 import javafx.geometry.Pos;
-import javafx.scene.ImageCursor;
-import javafx.scene.Parent;
 import javafx.scene.Scene;
 import javafx.scene.canvas.Canvas;
 import javafx.scene.control.Button;
 import javafx.scene.image.Image;
 import javafx.scene.layout.AnchorPane;
 import javafx.scene.layout.VBox;
-import javafx.stage.Screen;
 import javafx.stage.Stage;
 
 import java.io.File;
@@ -21,7 +18,7 @@ import java.io.IOException;
 import java.net.URL;
 import java.util.Objects;
 
-public class MainApplication extends Application {
+public class MainMenu extends Application {
 
     static Stage gameStage;
 
@@ -126,11 +123,11 @@ public class MainApplication extends Application {
     }
 
     public static URL getView(String name){
-        return MainApplication.class.getResource("windows/" + name + ".fxml");
+        return MainMenu.class.getResource("windows/" + name + ".fxml");
     }
 
     public static File getFile(String fileName) {
-        return new File(Objects.requireNonNull(MainApplication.class.getResource(fileName)).getPath());
+        return new File(Objects.requireNonNull(MainMenu.class.getResource(fileName)).getPath());
     }
 
     public static double getWidth() {
