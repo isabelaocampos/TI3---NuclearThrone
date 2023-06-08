@@ -2,6 +2,7 @@ package com.example.ti3.screens;
 
 import com.example.ti3.model.*;
 import com.example.ti3.control.MainController;
+import com.example.ti3.model.util.Vector;
 import javafx.scene.canvas.Canvas;
 import javafx.scene.input.KeyEvent;
 import javafx.scene.input.MouseEvent;

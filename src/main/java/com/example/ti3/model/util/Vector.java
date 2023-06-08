@@ -1,4 +1,4 @@
-package com.example.ti3.model;
+package com.example.ti3.model.util;
 
 public class Vector {
 
