@@ -1,6 +1,6 @@
 package com.example.ti3.model;
 
-import com.example.ti3.MainApplication;
+import com.example.ti3.MainMenu;
 import com.example.ti3.model.util.Vector;
 import javafx.scene.canvas.Canvas;
 import javafx.scene.canvas.GraphicsContext;
@@ -27,7 +27,7 @@ public class Bullet {
         this.direction =  direction;
         this.size = 10;
         this.speed = 10;
-        this.bulletImage = MainApplication.getImage("animations/hero/Objects/Bullet_000.png");
+        this.bulletImage = MainMenu.getImage("animations/hero/Objects/Bullet_000.png");
     }
 
     public void paint() {

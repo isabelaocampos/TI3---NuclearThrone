@@ -1,9 +1,6 @@
 package com.example.ti3.model;
 
-import com.example.ti3.MainApplication;
 import com.example.ti3.control.MainController;
-import com.example.ti3.screens.ScreenA;
-import javafx.scene.canvas.Canvas;
 import javafx.scene.canvas.GraphicsContext;
 import javafx.scene.image.Image;
 

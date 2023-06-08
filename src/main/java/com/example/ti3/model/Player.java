@@ -1,6 +1,6 @@
 package com.example.ti3.model;
 
-import com.example.ti3.MainApplication;
+import com.example.ti3.MainMenu;
 import com.example.ti3.model.util.Vector;
 import javafx.scene.canvas.Canvas;
 import javafx.scene.canvas.GraphicsContext;
@@ -11,7 +11,7 @@ import java.util.ArrayList;
 
 public class Player extends Entity {
 
-    MainApplication ma;
+    MainMenu ma;
     // Elementos graficos
     private Canvas canvas;
     private GraphicsContext graphicsContext;
@@ -51,17 +51,17 @@ public class Player extends Entity {
 
 
         for(int i = 1; i <= 3; i++){
-            Image image = MainApplication.getImage("animations/hero/idle/idle_0"+i+".png");
+            Image image = MainMenu.getImage("animations/hero/idle/idle_0"+i+".png");
             idleImages.add(image);
         }
 
         for(int i = 1; i <= 5; i++){
-            Image image = MainApplication.getImage("animations/hero/run/run_0" +i+".png");
+            Image image = MainMenu.getImage("animations/hero/run/run_0" +i+".png");
             runImages.add(image);
         }
 
         for(int i = 1; i <= 4; i++){
-            Image image = MainApplication.getImage("animations/hero/shoot/shoot_0"+i+".png");
+            Image image = MainMenu.getImage("animations/hero/shoot/shoot_0"+i+".png");
             attackImages.add(image);
         }
 
