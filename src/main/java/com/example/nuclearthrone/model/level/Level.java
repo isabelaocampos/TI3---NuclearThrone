@@ -293,7 +293,7 @@ public class Level {
     private static Level initLevel2() {
         Level level = new Level(1);
 
-        String uri = "file:" + MainMenu.getFile("environment/decoration/road.png").getPath();
+        String uri = "file:" + MainMenu.getFile("environment/decoration/mapa2.png").getPath();
         level.background = new Image(uri, MainMenu.getWidth(), MainMenu.getHeight(), false, false, false);
 
         level.walls.add(new Wall(-45, 0, 10000, 1, "rope"));
@@ -360,7 +360,7 @@ public class Level {
     }
     private static Level initLevel3(){
         Level level = new Level(2);
-        String uri = "file:" + MainMenu.getFile("environment/decoration/floor.png").getPath();
+        String uri = "file:" + MainMenu.getFile("environment/decoration/mapa3.png").getPath();
         level.background = new Image(uri, MainMenu.getWidth(), MainMenu.getHeight(), false, false, false);
 
         for(int y=0; y<=300; y+=50){
