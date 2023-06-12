@@ -29,6 +29,7 @@ public class EnemyBullet extends Bullet {
 
     @Override
     public boolean uniqueAliveConstraint(){
+
         return distanceTo(initialX, initialY) <= Ghost.RANGE + Ghost.RANGE_GAP;
     }
 }

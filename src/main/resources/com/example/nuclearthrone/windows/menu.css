@@ -1,12 +1,11 @@
 @font-face {
-    font-family: 'Karmatic Arcade';
-    src: url("fonts/ka1.ttf");
+    font-family: 'JetBrains Mono ExtraBold';
 }
 
 .button {
-    -fx-background-color: black;
-    -fx-text-fill: #4AD818;
-    -fx-font-family: 'Karmatic Arcade', monospace;
-    -fx-font-size: 28px;
+    -fx-background-color: #650434;
+    -fx-text-fill: White;
+    -fx-font-family: 'JetBrains Mono ExtraBold', monospace;
+    -fx-font-size: 20px;
     -fx-background-radius: 30;
 }
