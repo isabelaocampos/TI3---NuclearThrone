@@ -62,7 +62,7 @@ public class Avatar extends Entity implements IAnimation {
         initAnimation();
         animationPlayer = getAnimation();
         startAnimation();
-        hand.setImage(new Image(MainMenu.getFile("entities/weapon/fist.png").getPath()));
+        hand.setImage(new Image(MainMenu.getFile("entities/weapon/pixelFist.png").getPath()));
     }
 
     public void attack(double x, double y) {

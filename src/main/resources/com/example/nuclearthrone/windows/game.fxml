@@ -1,31 +1,27 @@
 <?xml version="1.0" encoding="UTF-8"?>
 
-<?import javafx.geometry.Insets?>
-<?import javafx.scene.canvas.Canvas?>
-<?import javafx.scene.control.Button?>
-<?import javafx.scene.control.ProgressBar?>
-<?import javafx.scene.image.Image?>
-<?import javafx.scene.image.ImageView?>
-<?import javafx.scene.layout.AnchorPane?>
-<?import javafx.scene.layout.HBox?>
-<?import javafx.scene.layout.VBox?>
-<?import javafx.scene.shape.Rectangle?>
+<?import javafx.geometry.*?>
+<?import javafx.scene.canvas.*?>
+<?import javafx.scene.control.*?>
+<?import javafx.scene.image.*?>
+<?import javafx.scene.layout.*?>
+<?import javafx.scene.shape.*?>
 
-<AnchorPane maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="720.0" prefWidth="1280.0" stylesheets="@game.css" xmlns="http://javafx.com/javafx/19" xmlns:fx="http://javafx.com/fxml/1" fx:controller="com.example.nuclearthrone.model.menus.Game">
+<AnchorPane maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="720.0" prefWidth="1280.0" stylesheets="@game.css" xmlns="http://javafx.com/javafx/17.0.2-ea" xmlns:fx="http://javafx.com/fxml/1" fx:controller="com.example.nuclearthrone.model.menus.Game">
    <children>
       <Canvas fx:id="canvas" height="720.0" width="1280.0" />
       <Rectangle arcHeight="15.0" arcWidth="15.0" height="60.0" layoutX="14.0" layoutY="14.0" opacity="0.4" stroke="BLACK" strokeType="INSIDE" width="212.0" />
-      <HBox alignment="CENTER_LEFT" fillHeight="false" layoutX="14.0" layoutY="14.0" prefHeight="60.0" prefWidth="212.0">
+      <HBox alignment="CENTER_LEFT" fillHeight="false" layoutX="14.0" layoutY="14.0" prefHeight="60.0" prefWidth="223.0">
          <children>
-            <ImageView fitHeight="43.0" fitWidth="72.0" pickOnBounds="true" preserveRatio="true" styleClass="picture">
+            <ImageView fitHeight="47.0" fitWidth="50.0" pickOnBounds="true" preserveRatio="true" styleClass="picture">
                <image>
-                  <Image url="@avatar-picture.png" />
+                  <Image url="@leaf_ranger.png" />
                </image>
                <HBox.margin>
                   <Insets left="10.0" />
                </HBox.margin>
             </ImageView>
-            <HBox alignment="CENTER_LEFT" nodeOrientation="LEFT_TO_RIGHT" prefHeight="61.0" prefWidth="90.0" spacing="5.0">
+            <HBox alignment="CENTER_LEFT" nodeOrientation="LEFT_TO_RIGHT" prefHeight="48.0" prefWidth="75.0" spacing="5.0">
                <children>
                   <ImageView fx:id="heartOne" fitHeight="30.0" fitWidth="25.0" pickOnBounds="true" preserveRatio="true" styleClass="picture">
                      <image>
@@ -49,15 +45,15 @@
             </HBox>
             <VBox prefHeight="60.0" prefWidth="43.0" spacing="5.0">
                <children>
-                  <ImageView fx:id="weaponImage" fitHeight="35.0" fitWidth="72.0" pickOnBounds="true" preserveRatio="true" styleClass="picture">
+                  <ImageView fx:id="weaponImage" fitHeight="35.0" fitWidth="50.0" pickOnBounds="true" preserveRatio="true" styleClass="picture">
                      <image>
-                        <Image url="@../entities/weapon/fist.png" />
+                        <Image url="@../entities/weapon/pixelFist.png" />
                      </image>
                      <VBox.margin>
                         <Insets top="6.0" />
                      </VBox.margin>
                   </ImageView>
-                  <ProgressBar fx:id="reloadBar" blendMode="DARKEN" cache="true" minHeight="8.0" nodeOrientation="LEFT_TO_RIGHT" prefHeight="12.0" prefWidth="47.0" progress="1.0" styleClass="reload" />
+                  <ProgressBar fx:id="reloadBar" blendMode="DARKEN" cache="true" minHeight="8.0" nodeOrientation="LEFT_TO_RIGHT" prefHeight="12.0" prefWidth="57.0" progress="1.0" styleClass="reload" />
                </children>
                <HBox.margin>
                   <Insets left="5.0" />
@@ -72,14 +68,14 @@
                <children>
                   <ImageView fitHeight="200.0" fitWidth="400.0" pickOnBounds="true" preserveRatio="true">
                      <image>
-                        <Image url="@gameOver.jpg" />
+                        <Image url="@howtoplay.png" />
                      </image>
                   </ImageView>
                   <HBox alignment="CENTER" prefHeight="100.0" prefWidth="400.0" spacing="30.0">
                      <children>
                         <ImageView fx:id="playAgainBtn" fitHeight="121.0" fitWidth="123.0" onMouseClicked="#playAgain" pickOnBounds="true" preserveRatio="true">
                            <image>
-                              <Image url="@playAgain.png" />
+                              <Image url="@gameOverr.png" />
                            </image>
                         </ImageView>
                         <Button fx:id="menuBtn" mnemonicParsing="false" onAction="#goToMenu" prefHeight="80.0" prefWidth="200.0" stylesheets="@menu.css" text="MENU">
@@ -98,7 +94,7 @@
             <Rectangle arcHeight="5.0" arcWidth="5.0" height="720.0" opacity="0.6" stroke="BLACK" strokeType="INSIDE" width="1280.0" />
             <ImageView fitHeight="300.0" fitWidth="412.0" layoutX="418.0" layoutY="234.0" pickOnBounds="true" preserveRatio="true">
                <image>
-                  <Image url="@winner.png" />
+                  <Image url="@trofeito.png" />
                </image>
             </ImageView>
          </children>
