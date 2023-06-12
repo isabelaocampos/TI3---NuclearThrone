@@ -151,8 +151,7 @@ public class Level {
             case RIGHT -> {
                 if (currentLevel().right != null) {
                     selected = levels.indexOf(currentLevel().right);
-                    Soundtrack.getInstance().stopSound("walking_sound");
-                    Soundtrack.getInstance().stopSound("footstep_grass");
+
                     entity.setX(1);
                     return true;
                 }
@@ -161,8 +160,6 @@ public class Level {
                 if (currentLevel().left != null) {
                     selected = levels.indexOf(currentLevel().left);
                     entity.setX(MainMenu.getWidth() - 11 - entity.getWidth());
-                    Soundtrack.getInstance().stopSound("walking_sound");
-                    Soundtrack.getInstance().stopSound("footstep_grass");
                     return true;
                 }
             }
@@ -170,16 +167,14 @@ public class Level {
                 if (currentLevel().up != null) {
                     selected = levels.indexOf(currentLevel().up);
                     entity.setY(MainMenu.getHeight() - 30 - entity.getHeight());
-                    Soundtrack.getInstance().stopSound("walking_sound");
-                    Soundtrack.getInstance().stopSound("footstep_grass");
+
                     return true;
                 }
             }
             case DOWN -> {
                 if (currentLevel().down != null) {
                     selected = levels.indexOf(currentLevel().down);
-                    Soundtrack.getInstance().stopSound("walking_sound");
-                    Soundtrack.getInstance().stopSound("footstep_grass");
+
                     entity.setY(1);
                     return true;
                 }
