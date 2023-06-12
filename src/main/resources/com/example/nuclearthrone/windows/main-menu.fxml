@@ -5,7 +5,7 @@
 
 <AnchorPane prefHeight="650.0" prefWidth="1200.0" styleClass="bodybg" stylesheets="@mainmenu.css" xmlns="http://javafx.com/javafx/17.0.2-ea" xmlns:fx="http://javafx.com/fxml/1" fx:controller="com.example.nuclearthrone.MainMenu">
     <VBox prefHeight="200.0" prefWidth="100.0" />
-    <VBox fx:id="buttonsVBOX" alignment="CENTER" layoutX="245.0" layoutY="176.0" prefHeight="157.0" prefWidth="300.0" spacing="15.0" style="-fx-padding: 0 0 80 0;" translateX="100.0" translateY="100.0">
+    <VBox fx:id="buttonsVBOX" alignment="CENTER" layoutX="484.0" layoutY="176.0" prefHeight="157.0" prefWidth="300.0" spacing="15.0" style="-fx-padding: 0 0 80 0;" translateX="100.0" translateY="100.0">
         <Button fx:id="playButton" prefHeight="66.0" prefWidth="240.0" stylesheets="@menu.css" text="Play">
         </Button>
         <Button fx:id="quitButton" prefHeight="66.0" prefWidth="166.0" stylesheets="@menu.css" text="Quit" />
