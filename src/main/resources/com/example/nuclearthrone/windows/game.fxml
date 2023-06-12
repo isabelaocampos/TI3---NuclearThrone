@@ -68,14 +68,14 @@
                <children>
                   <ImageView fitHeight="200.0" fitWidth="400.0" pickOnBounds="true" preserveRatio="true">
                      <image>
-                        <Image url="@howtoplay.png" />
+                        <Image url="@gameOverr.png" />
                      </image>
                   </ImageView>
                   <HBox alignment="CENTER" prefHeight="100.0" prefWidth="400.0" spacing="30.0">
                      <children>
                         <ImageView fx:id="playAgainBtn" fitHeight="121.0" fitWidth="123.0" onMouseClicked="#playAgain" pickOnBounds="true" preserveRatio="true">
                            <image>
-                              <Image url="@gameOverr.png" />
+                              <Image url="@playAgain.png" />
                            </image>
                         </ImageView>
                         <Button fx:id="menuBtn" mnemonicParsing="false" onAction="#goToMenu" prefHeight="80.0" prefWidth="200.0" stylesheets="@menu.css" text="MENU">
