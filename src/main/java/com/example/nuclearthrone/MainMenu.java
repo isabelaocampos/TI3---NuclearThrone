@@ -147,7 +147,7 @@ public class MainMenu extends Application {
             e.printStackTrace();
         }
 
-        Timeline timeline = new Timeline(new KeyFrame(Duration.seconds(5), event -> {
+        Timeline timeline = new Timeline(new KeyFrame(Duration.seconds(1), event -> {
             loadingStage.close();
             initGame();
         }));

@@ -28,8 +28,8 @@ public class Avatar extends Entity implements IAnimation {
 
     public static final int HEALTH = 100;
     public static final double SPEED = 3;
-    public static final double WIDTH = 50;
-    public static final double HEIGHT = 50;
+    public static final double WIDTH = 80;
+    public static final double HEIGHT = 80;
 
     private static HashMap<AnimationType, Image[]> animations;
     private static AnimationType animation;
@@ -242,28 +242,28 @@ public class Avatar extends Entity implements IAnimation {
     public void initAnimation() {
         if(animations == null){
             animations = new HashMap<>();
-            animations.put(AnimationType.IDLE, new Image[4]);
+
+            animations.put(AnimationType.IDLE, new Image[12]);
             for (int i = 1; i <= 12; i++) {
                 String uri = "file:" + MainMenu.getFile("entities/animations/PNG/idle/idle_" + i + ".png").getPath();
                 animations.get(AnimationType.IDLE)[i - 1] = new Image(uri, WIDTH,HEIGHT, false, true, false);
             }
+
             animations.put(AnimationType.RUN, new Image[10]);
             for (int i = 1; i <= 10; i++) {
                 String uri = "file:" + MainMenu.getFile("entities/animations/PNG/run/run_" + i + ".png").getPath();
                 animations.get(AnimationType.RUN)[i - 1] = new Image(uri,WIDTH,HEIGHT,false, true, false);
             }
 
-            //* */
-            animations.put(AnimationType.SHOOT, new Image[17]);
-            for (int i = 1; i <= 17; i++) {
-                String uri = "file:" + MainMenu.getFile("entities/animations/PNG/" + i + ".png").getPath();
+            animations.put(AnimationType.SHOOT, new Image[15]);
+            for (int i = 1; i <= 15; i++) {
+                String uri = "file:" + MainMenu.getFile("entities/animations/PNG/2_atk_" + i + ".png").getPath();
                 animations.get(AnimationType.SHOOT)[i - 1] = new Image(uri, WIDTH,HEIGHT, false, true, false);
             }
 
-            //* */
-            animations.put(AnimationType.HIT, new Image[4]);
-            for (int i = 1; i <= 4; i++) {
-                String uri = "file:" + MainMenu.getFile("entities/avatar/hit/Hobbit - hit" + i + ".png").getPath();
+            animations.put(AnimationType.HIT, new Image[10]);
+            for (int i = 1; i <= 10; i++) {
+                String uri = "file:" + MainMenu.getFile("entities/animations/PNG/1_atk_"+ i + ".png").getPath();
                 animations.get(AnimationType.HIT)[i - 1] = new Image(uri,WIDTH,HEIGHT,false, true, false);
             }
 
@@ -274,10 +274,9 @@ public class Avatar extends Entity implements IAnimation {
                 animations.get(AnimationType.DEATH)[i - 1] = new Image(uri,WIDTH,HEIGHT, true, false, false);
             }
 
-            //* */
-            animations.put(AnimationType.ATTACK, new Image[13]);
-            for (int i = 1; i <= 13; i++) {
-                String uri = "file:" + MainMenu.getFile("entities/avatar/attack/Hobbit - block" + i + ".png").getPath();
+            animations.put(AnimationType.ATTACK, new Image[10]);
+            for (int i = 1; i <= 10; i++) {
+                String uri = "file:" + MainMenu.getFile("entities/animations/PNG/1_atk_" + i + ".png").getPath();
                 animations.get(AnimationType.ATTACK)[i - 1] = new Image(uri, WIDTH,HEIGHT,false, true, false);
             }
         }
