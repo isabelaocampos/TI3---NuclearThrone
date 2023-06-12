@@ -194,9 +194,9 @@ public class Level {
         // Top of the level
         for (int x = 0; x < MainMenu.getWidth(); x += 50) {
             if (x == 850) {
-                level.walls.add(new Wall(x, 0, 10000, 0, "brick-above"));
+                level.walls.add(new Wall(x, 0, 10000, 0, "blueAbove"));
             } else if (x == 300 || x == 800) {
-                level.walls.add(new Wall(x, 0, 10000, 0, "brick-side-left"));
+                level.walls.add(new Wall(x, 0, 10000, 0, "blueSideLeft"));
             } else if (x == 350 || x == 900) {
                 level.walls.add(new Wall(x, 0, 10000, 0, "brick-side-right"));
             } else {
@@ -209,8 +209,7 @@ public class Level {
         level.walls.add(new Wall(350, 100, 10000, 0, "brick-side-right"));
         level.walls.add(new Wall(150, 150, 10000, 0, "brick-incorner-top-left"));
         level.walls.add(new Wall(150, 250, 10000, 0, "brick-end-left"));
-        level.decorations.add(new Decoration(100, 300, "floor-shadow-corner", 90));
-        level.decorations.add(new Decoration(150, 300, "floor-shadow-top-right", 0));
+
         for (int x = 200; x < 500; x += 50) {
             if (x == 300) {
                 level.walls.add(new Wall(x, 150, 10000, 0, "brick-corner-top-left"));
@@ -221,12 +220,7 @@ public class Level {
             }
             level.walls.add(new Wall(x, 200, 10000, 0, "brick-side-bottom"));
             level.walls.add(new Wall(x, 250, 10000, 0, "brick"));
-            level.decorations.add(new Decoration(x, 300, "floor-shadow-top-right", 0));
         }
-        level.decorations.add(new Decoration(500, 300, "floor-shadow-top-right", 0));
-        level.decorations.add(new Decoration(550, 300, "floor-shadow-corner", 0));
-        level.decorations.add(new Decoration(550, 250, "floor-shadow-corner", 270));
-        level.decorations.add(new Decoration(550, 200, "floor-shadow-corner", 270));
         level.walls.add(new Wall(500, 250, 10000, 0, "brick-end-right"));
         level.walls.add(new Wall(500, 150, 10000, 0, "brick-incorner-top-right"));
         level.walls.add(new Wall(150, 200, 10000, 0, "brick-incorner-bottom-left"));
@@ -263,7 +257,6 @@ public class Level {
                 level.walls.add(new Wall(x, 450, 10000, 0, "brick-side-bottom"));
             }
             level.walls.add(new Wall(x, 500, 10000, 0, "brick"));
-            level.decorations.add(new Decoration(x, 550, "floor-shadow-top-right", 0));
         }
         level.walls.add(new Wall(900, 500, 10000, 0, "brick-end-right"));
 
