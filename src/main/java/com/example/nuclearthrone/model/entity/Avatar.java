@@ -243,30 +243,38 @@ public class Avatar extends Entity implements IAnimation {
         if(animations == null){
             animations = new HashMap<>();
             animations.put(AnimationType.IDLE, new Image[4]);
-            for (int i = 1; i <= 4; i++) {
-                String uri = "file:" + MainMenu.getFile("entities/avatar/idle/Hobbit - Idle" + i + ".png").getPath();
+            for (int i = 1; i <= 12; i++) {
+                String uri = "file:" + MainMenu.getFile("entities/animations/PNG/idle/idle_" + i + ".png").getPath();
                 animations.get(AnimationType.IDLE)[i - 1] = new Image(uri, WIDTH,HEIGHT, false, true, false);
             }
             animations.put(AnimationType.RUN, new Image[10]);
             for (int i = 1; i <= 10; i++) {
-                String uri = "file:" + MainMenu.getFile("entities/avatar/run/Hobbit - run" + i + ".png").getPath();
+                String uri = "file:" + MainMenu.getFile("entities/animations/PNG/run/run_" + i + ".png").getPath();
                 animations.get(AnimationType.RUN)[i - 1] = new Image(uri,WIDTH,HEIGHT,false, true, false);
             }
+
+            //* */
             animations.put(AnimationType.SHOOT, new Image[17]);
             for (int i = 1; i <= 17; i++) {
-                String uri = "file:" + MainMenu.getFile("entities/avatar/shoot/Hobbit - attack" + i + ".png").getPath();
+                String uri = "file:" + MainMenu.getFile("entities/animations/PNG/" + i + ".png").getPath();
                 animations.get(AnimationType.SHOOT)[i - 1] = new Image(uri, WIDTH,HEIGHT, false, true, false);
             }
+
+            //* */
             animations.put(AnimationType.HIT, new Image[4]);
             for (int i = 1; i <= 4; i++) {
                 String uri = "file:" + MainMenu.getFile("entities/avatar/hit/Hobbit - hit" + i + ".png").getPath();
                 animations.get(AnimationType.HIT)[i - 1] = new Image(uri,WIDTH,HEIGHT,false, true, false);
             }
-            animations.put(AnimationType.DEATH, new Image[12]);
-            for (int i = 1; i <= 12; i++) {
-                String uri = "file:" + MainMenu.getFile("entities/avatar/death/Hobbit - death" + i + ".png").getPath();
+
+            //* */
+            animations.put(AnimationType.DEATH, new Image[19]);
+            for (int i = 1; i <= 19; i++) {
+                String uri = "file:" + MainMenu.getFile("entities/animations/PNG/death/death_"+ i + ".png").getPath();
                 animations.get(AnimationType.DEATH)[i - 1] = new Image(uri,WIDTH,HEIGHT, true, false, false);
             }
+
+            //* */
             animations.put(AnimationType.ATTACK, new Image[13]);
             for (int i = 1; i <= 13; i++) {
                 String uri = "file:" + MainMenu.getFile("entities/avatar/attack/Hobbit - block" + i + ".png").getPath();
