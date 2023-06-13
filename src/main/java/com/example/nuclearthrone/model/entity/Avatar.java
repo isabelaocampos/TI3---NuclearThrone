@@ -28,8 +28,8 @@ public class Avatar extends Entity implements IAnimation {
 
     public static final int HEALTH = 100;
     public static final double SPEED = 3;
-    public static final double WIDTH = 80;
-    public static final double HEIGHT = 80;
+    public static final double WIDTH = 50;
+    public static final double HEIGHT = 50;
 
     private static HashMap<AnimationType, Image[]> animations;
     private static AnimationType animation;
@@ -119,17 +119,16 @@ public class Avatar extends Entity implements IAnimation {
         }
     }
 
-    Soundtrack playSoundtrack = Soundtrack.getInstance();
     @Override
     public void takeDamage(Entity other) {
         if (isAlive) {
             animation = AnimationType.HIT;
             health -= other.damage;
             isAlive = health > 0;
-            playSoundtrack.reproduceSound("playerDamage_sound",false);
+
             if (!isAlive) {
                 animation = AnimationType.DEATH;
-                playSoundtrack.reproduceSound("gameOver_sound",false);
+
                 Soundtrack.getInstance().stopSound("walking_sound");
                 Soundtrack.getInstance().stopSound("footstep_grass");
             }
@@ -179,11 +178,7 @@ public class Avatar extends Entity implements IAnimation {
                     setX(previousX + SPEED);
                     lookingAt = Direction.RIGHT;
                 }
-                if(Level.getSelected() == 3){
-                    playSoundtrack.reproduceSound("footstep_grass");
-                }else{
-                    playSoundtrack.reproduceSound("walking_sound");
-                }
+
 
                 if (isOutOfScreen(instance)) {
                     if (!Level.inGate(instance)) {
@@ -243,27 +238,31 @@ public class Avatar extends Entity implements IAnimation {
         if(animations == null){
             animations = new HashMap<>();
 
-            animations.put(AnimationType.IDLE, new Image[12]);
-            for (int i = 1; i <= 12; i++) {
+            //** /
+            animations.put(AnimationType.IDLE, new Image[8]);
+            for (int i = 1; i <= 8; i++) {
                 String uri = "file:" + MainMenu.getFile("entities/animations/PNG/idle/idle_" + i + ".png").getPath();
                 animations.get(AnimationType.IDLE)[i - 1] = new Image(uri, WIDTH,HEIGHT, false, true, false);
             }
 
+            //* */
             animations.put(AnimationType.RUN, new Image[10]);
             for (int i = 1; i <= 10; i++) {
                 String uri = "file:" + MainMenu.getFile("entities/animations/PNG/run/run_" + i + ".png").getPath();
                 animations.get(AnimationType.RUN)[i - 1] = new Image(uri,WIDTH,HEIGHT,false, true, false);
             }
 
+            //* pondré 2_attack porque parece ser el que dispara/
             animations.put(AnimationType.SHOOT, new Image[15]);
             for (int i = 1; i <= 15; i++) {
-                String uri = "file:" + MainMenu.getFile("entities/animations/PNG/2_atk_" + i + ".png").getPath();
+                String uri = "file:" + MainMenu.getFile("entities/animations/PNG/2_atk/2_atk_" + i + ".png").getPath();
                 animations.get(AnimationType.SHOOT)[i - 1] = new Image(uri, WIDTH,HEIGHT, false, true, false);
             }
 
-            animations.put(AnimationType.HIT, new Image[10]);
-            for (int i = 1; i <= 10; i++) {
-                String uri = "file:" + MainMenu.getFile("entities/animations/PNG/1_atk_"+ i + ".png").getPath();
+            //* 1_attack que es el que pega con un palo */
+            animations.put(AnimationType.HIT, new Image[9]);
+            for (int i = 1; i <= 9; i++) {
+                String uri = "file:" + MainMenu.getFile("entities/animations/PNG/1_atk/1_atk_"+ i + ".png").getPath();
                 animations.get(AnimationType.HIT)[i - 1] = new Image(uri,WIDTH,HEIGHT,false, true, false);
             }
 
@@ -274,9 +273,10 @@ public class Avatar extends Entity implements IAnimation {
                 animations.get(AnimationType.DEATH)[i - 1] = new Image(uri,WIDTH,HEIGHT, true, false, false);
             }
 
-            animations.put(AnimationType.ATTACK, new Image[10]);
-            for (int i = 1; i <= 10; i++) {
-                String uri = "file:" + MainMenu.getFile("entities/animations/PNG/1_atk_" + i + ".png").getPath();
+            //** uso attack 2, no muy presente pq ya*/
+            animations.put(AnimationType.ATTACK, new Image[15]);
+            for (int i = 1; i <= 15; i++) {
+                String uri = "file:" + MainMenu.getFile("entities/animations/PNG/2_atk/2_atk_" + i + ".png").getPath();
                 animations.get(AnimationType.ATTACK)[i - 1] = new Image(uri, WIDTH,HEIGHT,false, true, false);
             }
         }
