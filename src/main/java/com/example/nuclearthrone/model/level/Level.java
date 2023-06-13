@@ -195,79 +195,49 @@ public class Level {
         for (int x = 0; x < MainMenu.getWidth(); x += 50) {
             if (x == 850) {
                 level.walls.add(new Wall(x, 0, 10000, 0, "tile062"));
-            } else if (x == 300 || x == 800) {
+            } else if (x == 250 || x == 800) {
                 level.walls.add(new Wall(x, 0, 10000, 0, "tile048"));
-            } else if (x == 350 || x == 900) {
+            } else if (x == 300 || x == 900) {
                 level.walls.add(new Wall(x, 0, 10000, 0, "tile050"));
             } else {
-                level.walls.add(new Wall(x, 0, 10000, 0, "brick"));
+                level.walls.add(new Wall(x, 0, 10000, 0, "tile114"));
             }
         }
-        level.walls.add(new Wall(300, 50, 10000, 0, "tile048"));
-        level.walls.add(new Wall(300, 100, 10000, 0, "tile048"));
-        level.walls.add(new Wall(350, 50, 10000, 0, "tile050"));
-        level.walls.add(new Wall(350, 100, 10000, 0, "tile050"));
-        level.walls.add(new Wall(150, 150, 10000, 0, "brick-incorner-top-left"));
-        level.walls.add(new Wall(150, 250, 10000, 0, "brick-end-left"));
+        level.walls.add(new Wall(250, 50, 10000, 0, "tile048"));
+        level.walls.add(new Wall(250, 100, 10000, 0, "tile048"));
+        level.walls.add(new Wall(300, 50, 10000, 0, "tile050"));
+        level.walls.add(new Wall(300, 100, 10000, 0, "tile050"));
+        level.walls.add(new Wall(150, 150, 10000, 0, "tile052"));
         for (int x = 200; x < 500; x += 50) {
-            if (x == 300) {
-                level.walls.add(new Wall(x, 150, 10000, 0, "brick-corner-top-left"));
-            } else if (x == 350) {
-                level.walls.add(new Wall(x, 150, 10000, 0, "brick-corner-top-right"));
+            if (x == 250) {
+                level.walls.add(new Wall(x, 150, 10000, 0, "tile062"));
+            } else if (x == 300) {
+                level.walls.add(new Wall(x, 150, 10000, 0, "tile062"));
             } else {
-                level.walls.add(new Wall(x, 150, 10000, 0, "brick-side-top"));
+                level.walls.add(new Wall(x, 150, 10000, 0, "tile053 - copia"));
             }
-            level.walls.add(new Wall(x, 200, 10000, 0, "brick-side-bottom"));
-            level.walls.add(new Wall(x, 250, 10000, 0, "brick"));
+            level.walls.add(new Wall(x, 200, 10000, 0, "tile053"));
         }
-        level.walls.add(new Wall(500, 250, 10000, 0, "brick-end-right"));
-        level.walls.add(new Wall(500, 150, 10000, 0, "brick-incorner-top-right"));
-        level.walls.add(new Wall(150, 200, 10000, 0, "brick-incorner-bottom-left"));
-        level.walls.add(new Wall(500, 200, 10000, 0, "brick-incorner-bottom-right"));
+
+        level.walls.add(new Wall(500, 150, 10000, 0, "tile062"));
+        level.walls.add(new Wall(150, 200, 10000, 0, "tile062"));
+        level.walls.add(new Wall(500, 200, 10000, 0, "tile057"));
 
         // Right side bridge
         for (int x = 800; x < 950; x += 50) {
             for (int y = 50; y < 400; y += 50) {
                 if (x == 800) {
-                    level.walls.add(new Wall(x, y, 10000, 0, "brick-side-left"));
+                    level.walls.add(new Wall(x, y, 10000, 0, "tile048"));
                 } else if (x == 850) {
-                    level.walls.add(new Wall(x, y, 10000, 0, "brick-above"));
+                    level.walls.add(new Wall(x, y, 10000, 0, "tile062"));
                 } else {
-                    level.walls.add(new Wall(x, y, 10000, 0, "brick-side-right"));
+                    level.walls.add(new Wall(x, y, 10000, 0, "tile050"));
                 }
             }
         }
 
-        level.walls.add(new Wall(550, 400, 10000, 0, "brick-incorner-top-left"));
-        level.walls.add(new Wall(550, 450, 10000, 0, "brick-incorner-bottom-left"));
-        level.walls.add(new Wall(550, 500, 10000, 0, "brick-end-left"));
-        for (int x = 600; x < 950; x += 50) {
-            if (x == 800) {
-                level.walls.add(new Wall(x, 400, 10000, 0, "brick-corner-top-left"));
-                level.walls.add(new Wall(x, 450, 10000, 0, "brick-side-bottom"));
-            } else if (x == 850) {
-                level.walls.add(new Wall(x, 400, 10000, 0, "brick-above"));
-                level.walls.add(new Wall(x, 450, 10000, 0, "brick-side-bottom"));
-            } else if (x == 900) {
-                level.walls.add(new Wall(x, 400, 10000, 0, "brick-side-right"));
-                level.walls.add(new Wall(x, 450, 10000, 0, "brick-incorner-bottom-right"));
-            } else {
-                level.walls.add(new Wall(x, 400, 10000, 0, "brick-side-top"));
-                level.walls.add(new Wall(x, 450, 10000, 0, "brick-side-bottom"));
-            }
-            level.walls.add(new Wall(x, 500, 10000, 0, "brick"));
-        }
-        level.walls.add(new Wall(900, 500, 10000, 0, "brick-end-right"));
 
         // Little square at bottom
-        level.walls.add(new Wall(150, MainMenu.getHeight() - 50, 10000, 0, "brick-side-left"));
-        level.walls.add(new Wall(150, MainMenu.getHeight() - 100, 10000, 0, "brick-side-left"));
-        level.walls.add(new Wall(150, MainMenu.getHeight() - 150, 10000, 0, "brick-incorner-top-left"));
-        level.walls.add(new Wall(200, MainMenu.getHeight() - 150, 30, 0, "brick-side-top"));
-        level.walls.add(new Wall(250, MainMenu.getHeight() - 150, 30, 0, "brick-side-top"));
-        level.walls.add(new Wall(300, MainMenu.getHeight() - 150, 10000, 0, "brick-incorner-top-right"));
-        level.walls.add(new Wall(300, MainMenu.getHeight() - 100, 10000, 0, "brick-side-right"));
-        level.walls.add(new Wall(300, MainMenu.getHeight() - 50, 10000, 0, "brick-side-right"));
 
         level.items.add(new Staff(230, MainMenu.getHeight() - 70));
         level.items.add(new Slingshot(470, 95));
