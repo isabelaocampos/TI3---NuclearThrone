@@ -6,6 +6,7 @@ import com.example.nuclearthrone.MainMenu;
 import com.example.nuclearthrone.model.entity.Avatar;
 import com.example.nuclearthrone.model.entity.Entity;
 import com.example.nuclearthrone.model.entity.MovableEntity;
+import com.example.nuclearthrone.model.entity.ammo.Arrow;
 import com.example.nuclearthrone.model.entity.ammo.Bullet;
 import com.example.nuclearthrone.model.entity.enemy.Enemy;
 import com.example.nuclearthrone.model.entity.enviroment.Decoration;
@@ -294,6 +295,8 @@ public class Level {
 
         level.walls.add(new Wall(1260, 0, 10000, 1, "tile062"));
         level.walls.add(new Wall(1260, 50, 10000, 1, "tile062"));
+
+
 
         return level;
     }

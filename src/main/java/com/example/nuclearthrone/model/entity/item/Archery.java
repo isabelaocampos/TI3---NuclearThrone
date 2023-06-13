@@ -11,8 +11,8 @@ import javafx.scene.image.Image;
 public class Archery extends Weapon {
 
     public static final double DELAY = 1200;
-    public static final double WIDTH = 10;
-    public static final double HEIGHT = 20;
+    public static final double WIDTH = 40;
+    public static final double HEIGHT = 50;
     public static final String SPRITE = "entities/weapon/arco.png";
 
     public Archery(double x, double y) {
