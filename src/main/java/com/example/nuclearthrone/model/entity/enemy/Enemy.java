@@ -27,7 +27,6 @@ public abstract class Enemy extends MovableEntity {
     public void takeDamage(Entity other) {
         health -= other.damage;
         if (health <= 0) {
-            Soundtrack.getInstance().reproduceSound("enemyKilled_sound",false);
             isAlive = false;
             Objects.requireNonNull(Level.getLevel(level)).entities.remove(this);
         }
