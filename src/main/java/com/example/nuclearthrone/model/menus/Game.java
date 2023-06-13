@@ -88,6 +88,7 @@ public class Game {
                     graphicsContext.drawImage(currentLevel.background, 0, 0);
                     paintEntities(currentLevel);
                     checkAvatarAlive();
+                    checkAvatarWinAlive();
                 });
                 try {
                     Thread.sleep(msRate());
