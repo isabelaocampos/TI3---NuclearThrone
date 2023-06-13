@@ -2,7 +2,7 @@ package com.example.nuclearthrone.model.entity.ammo;
 
 import com.example.nuclearthrone.MainMenu;
 import com.example.nuclearthrone.model.entity.Entity;
-import com.example.nuclearthrone.model.entity.enemy.Ghost;
+import com.example.nuclearthrone.model.entity.enemy.Wizard;
 
 import javafx.scene.image.Image;
 
@@ -30,6 +30,6 @@ public class EnemyBullet extends Bullet {
     @Override
     public boolean uniqueAliveConstraint(){
 
-        return distanceTo(initialX, initialY) <= Ghost.RANGE + Ghost.RANGE_GAP;
+        return distanceTo(initialX, initialY) <= Wizard.RANGE + Wizard.RANGE_GAP;
     }
 }

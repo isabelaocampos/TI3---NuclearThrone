@@ -17,7 +17,7 @@ import javafx.animation.Timeline;
 import javafx.scene.image.Image;
 import javafx.util.Duration;
 
-public class Ghost extends Enemy {
+public class Wizard extends Enemy {
 
     public static final double RANGE = 250;
     public static final double RANGE_GAP = 50;
@@ -30,10 +30,10 @@ public class Ghost extends Enemy {
 
     private long nextShot;
 
-    public Ghost(double x, double y, int level) {
+    public Wizard(double x, double y, int level) {
         super(x, y, WIDTH, HEIGHT, HEALTH, -1, SPEED, level);
         nextShot = System.currentTimeMillis();
-        String uri = "file:" + MainMenu.getFile("entities/ghost.png").getPath();
+        String uri = "file:" + MainMenu.getFile("entities/wizard.png").getPath();
         sprite = new Image(uri, getWidth(), getHeight(), true, false, false);
     }
 
@@ -64,7 +64,7 @@ public class Ghost extends Enemy {
         if (animations == null) {
             animations = new HashMap<>();
             animations.put(AnimationType.IDLE, new Image[1]);
-            String uri = "file:" + MainMenu.getFile("entities/ghost.png").getPath();
+            String uri = "file:" + MainMenu.getFile("entities/wizard.png").getPath();
             animations.get(AnimationType.IDLE)[0] = new Image(uri, getWidth(), getHeight(), false, true, false);
         }
     }

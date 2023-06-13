@@ -63,12 +63,12 @@ public abstract class Enemy extends MovableEntity {
         int type = (int) (Math.random() * 2);
         switch (type) {
             case 0 -> {
-                return new Ghost(Math.random() * (MainMenu.getWidth() - Ghost.WIDTH),
-                        Math.random() * (MainMenu.getHeight() - Ghost.HEIGHT), level);
+                return new Wizard(Math.random() * (MainMenu.getWidth() - Wizard.WIDTH),
+                        Math.random() * (MainMenu.getHeight() - Wizard.HEIGHT), level);
             }
             case 1 -> {
-                return new Knight(Math.random() * (MainMenu.getWidth() - Ghost.WIDTH),
-                        Math.random() * (MainMenu.getHeight() - Ghost.HEIGHT), level);
+                return new Knight(Math.random() * (MainMenu.getWidth() - Wizard.WIDTH),
+                        Math.random() * (MainMenu.getHeight() - Wizard.HEIGHT), level);
             }
             default -> {
             }

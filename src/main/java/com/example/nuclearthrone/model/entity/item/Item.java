@@ -2,9 +2,6 @@ package com.example.nuclearthrone.model.entity.item;
 
 import com.example.nuclearthrone.MainMenu;
 import com.example.nuclearthrone.model.entity.Entity;
-import com.example.nuclearthrone.model.entity.enemy.Enemy;
-import com.example.nuclearthrone.model.entity.enemy.Ghost;
-import com.example.nuclearthrone.model.entity.enemy.Knight;
 
 public class Item extends Entity {
     

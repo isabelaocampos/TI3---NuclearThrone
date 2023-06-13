@@ -29,7 +29,7 @@ public class Knight extends Enemy {
     public Knight(double x, double y, int level) {
         super(x, y, WIDTH, HEIGHT, HEALTH, DAMAGE, SPEED, level);
         nextAttack = System.currentTimeMillis();
-        String uri = "file:" + MainMenu.getFile("entities/knight.png").getPath();
+        String uri = "file:" + MainMenu.getFile("entities/Enemy.png").getPath();
         sprite = new Image(uri, getWidth(), getHeight(), true, false, false);
     }
 
@@ -54,7 +54,7 @@ public class Knight extends Enemy {
         if (animations == null) {
             animations = new HashMap<>();
             animations.put(AnimationType.IDLE, new Image[1]);
-            String uri = "file:" + MainMenu.getFile("entities/knight.png").getPath();
+            String uri = "file:" + MainMenu.getFile("entities/Enemy.png").getPath();
             animations.get(AnimationType.IDLE)[0] = new Image(uri, getWidth(), getHeight(), false, true, false);
         }
     }
