@@ -345,21 +345,47 @@ public class Level {
         int columnSpacing = 150;
 
         level.walls.add(new Wall(-45, 570, 10000, 3, "car2"));
-        level.walls.add(new Wall(-45, 620, 10000, 3, "car2"));
+        level.walls.add(new Wall(-45, 620, 10000, 3, "car1"));
+
+        for(int y=250; y<=520; y+=50){
+            for(int x=1000; x<1200; x+=50){
+                if(y==250){
+                    if(x==1000){
+                        level.walls.add(new Wall(x, y, 10000, 2,"tile062"));
+                    }
+                    if(x==1100){
+                        level.walls.add(new Wall(x, y, 10000, 2,"tile062"));
+                    }
+                    if(x>1000 && x<1100){
+                        level.walls.add(new Wall(x, y, 10000, 2,"tile033"));
+                    }
+                }
+                if(y>250){
+                    if(x==1000){
+                        level.walls.add(new Wall(x, y, 10000, 2,"tile062"));
+                    }
+                    if(x==1100){
+                        level.walls.add(new Wall(x, y, 10000, 2,"tile062"));
+                    }
+                    if(x>1000 && x<1100){
+                        level.walls.add(new Wall(x, y, 10000, 2,"tile033"));
+                    }
+                }
+            }
+        }
 
         // Left side walls (first column)
         for (int y = 0; y < MainMenu.getHeight(); y += 150) {
-            level.walls.add(new Wall(MainMenu.getWidth() / 2 - 2 * columnSpacing - 2 * columnWidth + 50, y,33, 33, columnWidth, 3, "tile062"));
+            level.walls.add(new Wall(MainMenu.getWidth() / 2 - 2 * columnSpacing - 2 * columnWidth + 50, y,33, 50, columnWidth, 3, "tile062"));
         }
-
-
-
-        // Right side walls (first column)
-        int rightColumnX = (int) (MainMenu.getWidth() - columnWidth - columnSpacing);
-        for (int y = 0; y < MainMenu.getHeight(); y += 150) {
-            level.walls.add(new Wall(rightColumnX, y,33, 33, columnWidth, 3, "tile062"));
-        }
-
+        level.walls.add(new Wall(150, MainMenu.getHeight() - 50, 10000, 0, "brick-side-left"));
+        level.walls.add(new Wall(150, MainMenu.getHeight() - 100, 10000, 0, "brick-side-left"));
+        level.walls.add(new Wall(150, MainMenu.getHeight() - 150, 10000, 0, "brick-incorner-top-left"));
+        level.walls.add(new Wall(200, MainMenu.getHeight() - 150, 30, 0, "brick-side-top"));
+        level.walls.add(new Wall(250, MainMenu.getHeight() - 150, 30, 0, "brick-side-top"));
+        level.walls.add(new Wall(300, MainMenu.getHeight() - 150, 10000, 0, "brick-incorner-top-right"));
+        level.walls.add(new Wall(300, MainMenu.getHeight() - 100, 10000, 0, "brick-side-right"));
+        level.walls.add(new Wall(300, MainMenu.getHeight() - 50, 10000, 0, "brick-side-right"));
 
 
         level.entities.add(new Ball(MainMenu.getWidth() / 2 - 25, 325,3));
