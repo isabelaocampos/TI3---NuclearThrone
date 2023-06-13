@@ -60,7 +60,6 @@ public class Game {
     @FXML
     private ImageView weaponImage;
 
-
     @FXML
     void goToMenu(ActionEvent event) {
         canvas.getScene().getWindow().hide();
@@ -89,7 +88,6 @@ public class Game {
                     graphicsContext.drawImage(currentLevel.background, 0, 0);
                     paintEntities(currentLevel);
                     checkAvatarAlive();
-                    checkAvatarWinAlive();
                 });
                 try {
                     Thread.sleep(msRate());
@@ -105,6 +103,7 @@ public class Game {
     private boolean allEnemiesEliminated = false;
 
     public void bindHUD(){
+
         Avatar.hearts = new ImageView[3];
         Avatar.hearts[0] = heartOne;
         Avatar.hearts[1] = heartTwo;
