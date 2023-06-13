@@ -100,7 +100,7 @@ public class Game {
     GraphicsContext graphicsContext;
 
     public void bindHUD(){
-        Ball.winner = winner;
+        
         Avatar.hearts = new ImageView[3];
         Avatar.hearts[0] = heartOne;
         Avatar.hearts[1] = heartTwo;
