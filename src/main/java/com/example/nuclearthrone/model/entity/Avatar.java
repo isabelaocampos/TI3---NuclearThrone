@@ -282,10 +282,10 @@ public class Avatar extends Entity implements IAnimation {
                 animations.get(AnimationType.SHOOT)[i - 1] = new Image(uri, WIDTH,HEIGHT, false, true, false);
             }
 
-            //* 1_attack que es el que pega con un palo */
-            animations.put(AnimationType.HIT, new Image[9]);
-            for (int i = 1; i <= 9; i++) {
-                String uri = "file:" + MainMenu.getFile("entities/animations/PNG/1_atk/1_atk_"+ i + ".png").getPath();
+            //* es golpeado el jugadorrrrr */
+            animations.put(AnimationType.HIT, new Image[19]);
+            for (int i = 1; i <= 19; i++) {
+                String uri = "file:" + MainMenu.getFile("entities/animations/PNG/defend/defend_" + i+ ".png").getPath();
                 animations.get(AnimationType.HIT)[i - 1] = new Image(uri,WIDTH,HEIGHT,false, true, false);
             }
 
