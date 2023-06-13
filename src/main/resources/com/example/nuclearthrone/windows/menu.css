@@ -1,11 +1,12 @@
 @font-face {
-    font-family: 'JetBrains Mono ExtraBold';
+    font-family: 'KarmaFuture';
+    src: url("fonts/KarmaFuture.ttf");
 }
 
 .button {
     -fx-background-color: #650434;
     -fx-text-fill: White;
-    -fx-font-family: 'JetBrains Mono ExtraBold', monospace;
+    -fx-font-family: 'KarmaFuture', monospace;
     -fx-font-size: 20px;
     -fx-background-radius: 30;
 }

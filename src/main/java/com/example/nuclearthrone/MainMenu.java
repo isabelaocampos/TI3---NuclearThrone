@@ -7,7 +7,6 @@ import java.util.Objects;
 
 import com.example.nuclearthrone.model.entity.Avatar;
 import com.example.nuclearthrone.model.level.Level;
-import com.example.nuclearthrone.model.menus.Soundtrack;
 
 import javafx.animation.*;
 import javafx.application.Application;
@@ -17,18 +16,10 @@ import javafx.geometry.Pos;
 import javafx.scene.ImageCursor;
 import javafx.scene.Scene;
 import javafx.scene.canvas.Canvas;
-import javafx.scene.canvas.GraphicsContext;
 import javafx.scene.control.Button;
 import javafx.scene.image.Image;
-import javafx.scene.image.ImageView;
 import javafx.scene.layout.AnchorPane;
 import javafx.scene.layout.VBox;
-import javafx.scene.paint.Color;
-import javafx.scene.paint.CycleMethod;
-import javafx.scene.paint.RadialGradient;
-import javafx.scene.paint.Stop;
-import javafx.scene.shape.Circle;
-import javafx.scene.shape.Rectangle;
 import javafx.stage.Modality;
 import javafx.stage.Stage;
 import javafx.stage.StageStyle;
@@ -83,9 +74,9 @@ public class MainMenu extends Application {
         Scene scene = new Scene(root);
         primaryStage.setScene(scene);
         primaryStage.show();
-        primaryStage.onCloseRequestProperty().set(event->{
-            Soundtrack.getInstance().stopSound("03_before_the_dawn");
+        primaryStage.onCloseRequestProperty().set(event -> {
         });
+
     }
 
     public static void openWindow(String fxml) {

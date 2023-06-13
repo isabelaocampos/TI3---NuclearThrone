@@ -10,7 +10,6 @@ import com.example.nuclearthrone.model.entity.ammo.Bullet;
 import com.example.nuclearthrone.model.entity.ammo.EnemyBullet;
 import com.example.nuclearthrone.model.entity.enviroment.Decoration;
 import com.example.nuclearthrone.model.entity.enviroment.Wall;
-import com.example.nuclearthrone.model.entity.npc.Ball;
 import com.example.nuclearthrone.model.level.Level;
 
 import javafx.application.Platform;
@@ -141,7 +140,7 @@ public class Game {
         }
     }
 
-    @SuppressWarnings("unchecked")
+
     public void bulletsInteraction(Level currentLevel) {
         for (int i = 0; i < currentLevel.bullets.size(); i++) {
             Bullet currentB = currentLevel.bullets.get(i);

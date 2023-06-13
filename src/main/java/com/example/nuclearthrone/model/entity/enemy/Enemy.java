@@ -5,7 +5,6 @@ import java.util.Objects;
 import com.example.nuclearthrone.MainMenu;
 import com.example.nuclearthrone.model.entity.*;
 import com.example.nuclearthrone.model.level.Level;
-import com.example.nuclearthrone.model.menus.Soundtrack;
 import com.example.nuclearthrone.model.util.Vector;
 
 public abstract class Enemy extends MovableEntity {

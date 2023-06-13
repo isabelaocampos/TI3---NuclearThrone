@@ -8,7 +8,6 @@ import com.example.nuclearthrone.model.entity.item.Healing;
 import com.example.nuclearthrone.model.entity.item.Item;
 import com.example.nuclearthrone.model.entity.item.Weapon;
 import com.example.nuclearthrone.model.level.Level;
-import com.example.nuclearthrone.model.menus.Soundtrack;
 import com.example.nuclearthrone.model.util.Direction;
 import com.example.nuclearthrone.model.util.Images;
 
@@ -21,7 +20,6 @@ import javafx.beans.value.ObservableValue;
 import javafx.scene.control.ProgressBar;
 import javafx.scene.image.Image;
 import javafx.scene.image.ImageView;
-import javafx.scene.shape.Rectangle;
 import javafx.util.Duration;
 
 public class Avatar extends Entity implements IAnimation {
@@ -146,9 +144,6 @@ public class Avatar extends Entity implements IAnimation {
 
             if (!isAlive) {
                 animation = AnimationType.DEATH;
-
-                Soundtrack.getInstance().stopSound("walking_sound");
-                Soundtrack.getInstance().stopSound("footstep_grass");
             }
             spriteStage = 0;
             updateLifeBar();
