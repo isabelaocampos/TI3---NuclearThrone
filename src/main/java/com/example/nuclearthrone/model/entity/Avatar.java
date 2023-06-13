@@ -65,18 +65,6 @@ public class Avatar extends Entity implements IAnimation {
         hand.setImage(new Image(MainMenu.getFile("entities/weapon/pixelFist.png").getPath()));
     }
 
-    /*public void attack(double x, double y) {
-        if (animation != AnimationType.SHOOT && animation != AnimationType.ATTACK && isAlive && weapon != null) {
-            if (x > getX()) {
-                lookingAt = Direction.RIGHT;
-            } else {
-                lookingAt = Direction.LEFT;
-            }
-            reloadBar.setProgress(ProgressBar.INDETERMINATE_PROGRESS);
-            animation = weapon.attack(x, y);
-            spriteStage = 0;
-        }
-    }*/
 
     public void attack(double x, double y) {
         if (/*animation != AnimationType.SHOOT && animation != AnimationType.ATTACK &&*/ isAlive && weapon != null) {

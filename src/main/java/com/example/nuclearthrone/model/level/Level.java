@@ -109,7 +109,7 @@ public class Level {
         }
     }
 
-    private static ArrayList<Level> levels;
+    public static ArrayList<Level> levels;
     private static int selected;
 
     private static void initializeLevels() {

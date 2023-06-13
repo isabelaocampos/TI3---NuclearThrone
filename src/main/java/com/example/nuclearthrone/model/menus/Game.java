@@ -1,6 +1,7 @@
 package com.example.nuclearthrone.model.menus;
 
 import java.util.ArrayList;
+import java.util.List;
 
 import com.example.nuclearthrone.model.KeyboardControl;
 import com.example.nuclearthrone.model.entity.Avatar;
@@ -8,6 +9,7 @@ import com.example.nuclearthrone.model.entity.Entity;
 import com.example.nuclearthrone.model.entity.MovableEntity;
 import com.example.nuclearthrone.model.entity.ammo.Bullet;
 import com.example.nuclearthrone.model.entity.ammo.EnemyBullet;
+import com.example.nuclearthrone.model.entity.enemy.Enemy;
 import com.example.nuclearthrone.model.entity.enviroment.Decoration;
 import com.example.nuclearthrone.model.entity.enviroment.Wall;
 import com.example.nuclearthrone.model.level.Level;
@@ -58,6 +60,7 @@ public class Game {
     @FXML
     private ImageView weaponImage;
 
+
     @FXML
     void goToMenu(ActionEvent event) {
         canvas.getScene().getWindow().hide();
@@ -86,6 +89,7 @@ public class Game {
                     graphicsContext.drawImage(currentLevel.background, 0, 0);
                     paintEntities(currentLevel);
                     checkAvatarAlive();
+                    checkAvatarWinAlive();
                 });
                 try {
                     Thread.sleep(msRate());
@@ -98,9 +102,9 @@ public class Game {
     }
 
     GraphicsContext graphicsContext;
+    private boolean allEnemiesEliminated = false;
 
     public void bindHUD(){
-        Ball.winner = winner;
         Avatar.hearts = new ImageView[3];
         Avatar.hearts[0] = heartOne;
         Avatar.hearts[1] = heartTwo;
@@ -133,10 +137,16 @@ public class Game {
         for (int i = 0; i < current.items.size(); i++) {
             current.items.get(i).draw(graphicsContext);
         }
+
         bulletsInteraction(current);
         Avatar.getInstance().draw(graphicsContext);
         for (MovableEntity entity : current.entities) {
             entity.draw(graphicsContext);
+        }
+
+        // Verificar si todos los enemigos han sido eliminados
+        if (current.entities.isEmpty()) {
+            allEnemiesEliminated = true;
         }
     }
 
@@ -169,11 +179,31 @@ public class Game {
     }
 
     public void checkAvatarAlive(){
-        if(!Avatar.getInstance().isAlive) {
+        if (!Avatar.getInstance().isAlive ) {
+            // El jugador ha ganado
             gameOver.setVisible(true);
             playAgainBtn.setDisable(false);
             menuBtn.setDisable(false);
         }
+    }
+    public void checkAvatarWinAlive(){
+        if (Avatar.getInstance().isAlive && !enemiesLeft(Level.levels) && allEnemiesEliminated == true) {
+            // El jugador ha ganado
+            gameOver.setVisible(true);
+            playAgainBtn.setDisable(false);
+            menuBtn.setDisable(false);
+        }
+    }
+
+    public static boolean enemiesLeft(List<Level> levels) {
+        for(Level level : levels){
+            for(MovableEntity entity : level.entities){
+                if(entity instanceof Enemy){
+                    return true;
+                }
+            }
+        }
+        return false;
     }
 
     public static int msRate() {
