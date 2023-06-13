@@ -2,12 +2,16 @@
 
 <?import javafx.scene.control.*?>
 <?import javafx.scene.layout.*?>
+<?import javafx.scene.text.*?>
 
 <AnchorPane prefHeight="600.0" prefWidth="480.0" styleClass="bodybg" stylesheets="@mainmenu.css" xmlns="http://javafx.com/javafx/17.0.2-ea" xmlns:fx="http://javafx.com/fxml/1" fx:controller="com.example.nuclearthrone.MainMenu">
     <VBox prefHeight="320.0" prefWidth="480.0" />
     <VBox fx:id="buttonsVBOX" alignment="CENTER" layoutX="484.0" layoutY="176.0" prefHeight="157.0" prefWidth="300.0" spacing="15.0" style="-fx-padding: 0 0 80 0;" translateX="100.0" translateY="100.0">
         <Button fx:id="playButton" prefHeight="66.0" prefWidth="240.0" stylesheets="@menu.css" text="Play">
         </Button>
-        <Button fx:id="quitButton" prefHeight="66.0" prefWidth="166.0" stylesheets="@menu.css" text="Quit" />
+        <Button fx:id="quitButton" prefHeight="66.0" prefWidth="166.0" stylesheets="@menu.css" text="Quit">
+         <font>
+            <Font name="Karma Future" size="12.0" />
+         </font></Button>
     </VBox>
 </AnchorPane>

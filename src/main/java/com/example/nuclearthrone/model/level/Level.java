@@ -311,13 +311,13 @@ public class Level {
         int columnWidth = 100;
         int columnSpacing = 150;
 
-        level.walls.add(new Wall(1000, 200, 10000, 1, "car1"));
-        level.walls.add(new Wall(800, 250, 10000, 1, "car2"));
+        level.walls.add(new Wall(1000, 200, 50, 1, "car1"));
+        level.walls.add(new Wall(800, 250, 50, 1, "car2"));
 
         // Cows
-        level.walls.add(new Wall(450, 300, 10000, 1, "car3"));
-        level.walls.add(new Wall(350, 400, 10000, 1, "car2"));
-        level.walls.add(new Wall(400, 500, 10000, 1, "car1"));
+        level.walls.add(new Wall(450, 300, 50, 1, "car3"));
+        level.walls.add(new Wall(350, 400, 50, 1, "car2"));
+        level.walls.add(new Wall(400, 500, 50, 1, "car1"));
 
 
 
