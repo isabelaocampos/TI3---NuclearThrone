@@ -6,7 +6,7 @@ import com.example.nuclearthrone.MainMenu;
 import com.example.nuclearthrone.model.entity.Entity;
 import com.example.nuclearthrone.model.entity.ammo.EnemyBullet;
 import com.example.nuclearthrone.model.entity.ammo.Fireball;
-import com.example.nuclearthrone.model.entity.ammo.Rock;
+import com.example.nuclearthrone.model.entity.ammo.Arrow;
 import com.example.nuclearthrone.model.level.Level;
 
 import javafx.scene.image.Image;
@@ -35,7 +35,7 @@ public class Wall extends Entity {
             health -= 10;
         } else if (other instanceof EnemyBullet) {
             health -= 1;
-        } else if (other instanceof Rock) {
+        } else if (other instanceof Arrow) {
             health -= 5;
         }
         if (health <= 0) {

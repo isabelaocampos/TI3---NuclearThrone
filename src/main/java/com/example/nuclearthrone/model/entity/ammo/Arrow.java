@@ -4,14 +4,14 @@ import com.example.nuclearthrone.MainMenu;
 
 import javafx.scene.image.Image;
 
-public class Rock extends PlayerBullet {
+public class Arrow extends PlayerBullet {
 
     public static final double WIDTH = 20;
     public static final double HEIGHT = 20;
-    public static final String SPRITE = "entities/ammo/rock.png";
+    public static final String SPRITE = "entities/ammo/arrow.png";
     public static final int HITS = 1;
 
-    public Rock(int level) {
+    public Arrow(int level) {
         super(WIDTH, HEIGHT, HITS, level);
         speed = 7;
         stopAnimation();

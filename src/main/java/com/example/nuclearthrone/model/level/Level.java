@@ -7,15 +7,12 @@ import com.example.nuclearthrone.model.entity.Avatar;
 import com.example.nuclearthrone.model.entity.Entity;
 import com.example.nuclearthrone.model.entity.MovableEntity;
 import com.example.nuclearthrone.model.entity.ammo.Bullet;
-import com.example.nuclearthrone.model.entity.ammo.EnemyBullet;
 import com.example.nuclearthrone.model.entity.enemy.Enemy;
 import com.example.nuclearthrone.model.entity.enviroment.Decoration;
 import com.example.nuclearthrone.model.entity.enviroment.Wall;
 import com.example.nuclearthrone.model.entity.item.Item;
-import com.example.nuclearthrone.model.entity.item.Slingshot;
+import com.example.nuclearthrone.model.entity.item.Archery;
 import com.example.nuclearthrone.model.entity.item.Staff;
-import com.example.nuclearthrone.model.entity.npc.Ball;
-import com.example.nuclearthrone.model.menus.Soundtrack;
 import com.example.nuclearthrone.model.util.Direction;
 
 import javafx.collections.FXCollections;
@@ -240,7 +237,7 @@ public class Level {
         // Little square at bottom
 
         level.items.add(new Staff(230, MainMenu.getHeight() - 70));
-        level.items.add(new Slingshot(470, 95));
+        level.items.add(new Archery(470, 95));
 
         return level;
     }

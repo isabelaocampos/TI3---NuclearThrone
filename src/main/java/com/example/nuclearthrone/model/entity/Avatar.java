@@ -43,6 +43,8 @@ public class Avatar extends Entity implements IAnimation {
     public static ImageView hand;
     public static ProgressBar reloadBar;
 
+    private int state;
+
     public static Avatar getInstance() {
         if (instance == null) {
             instance = new Avatar(200, 70, WIDTH, HEIGHT);
@@ -65,7 +67,7 @@ public class Avatar extends Entity implements IAnimation {
         hand.setImage(new Image(MainMenu.getFile("entities/weapon/pixelFist.png").getPath()));
     }
 
-    public void attack(double x, double y) {
+    /*public void attack(double x, double y) {
         if (animation != AnimationType.SHOOT && animation != AnimationType.ATTACK && isAlive && weapon != null) {
             if (x > getX()) {
                 lookingAt = Direction.RIGHT;
@@ -76,7 +78,23 @@ public class Avatar extends Entity implements IAnimation {
             animation = weapon.attack(x, y);
             spriteStage = 0;
         }
+    }*/
+
+    public void attack(double x, double y) {
+        if (/*animation != AnimationType.SHOOT && animation != AnimationType.ATTACK &&*/ isAlive && weapon != null) {
+            if (x > getX()) {
+                lookingAt = Direction.RIGHT;
+            } else {
+                lookingAt = Direction.LEFT;
+            }
+            reloadBar.setProgress(ProgressBar.INDETERMINATE_PROGRESS);
+            weapon.attack(x, y);
+            spriteStage = 0;
+            animation = AnimationType.ATTACK;
+            startAnimation();
+        }
     }
+
 
     public Item collect(Item item) {
         Item temp = null;
@@ -137,8 +155,11 @@ public class Avatar extends Entity implements IAnimation {
         }
     }
 
+    // utiliza para representar un valor observable.
+    // Proporciona una forma de observar y recibir
+    // notificaciones cuando el valor cambia.
     public void onKeyPressed(ObservableValue<? extends Boolean> observable, Boolean a, Boolean keyPressed) {
-        if (animation != AnimationType.SHOOT && animation != AnimationType.ATTACK && isAlive) {
+        if (/*animation != AnimationType.SHOOT && animation != AnimationType.ATTACK && */ isAlive) {
             if (keyPressed) {
                 movement.start();
                 if(animation != AnimationType.HIT){
@@ -146,8 +167,7 @@ public class Avatar extends Entity implements IAnimation {
                 }
             } else {
                 movement.stop();
-                Soundtrack.getInstance().stopSound("walking_sound");
-                Soundtrack.getInstance().stopSound("footstep_grass");
+
                 if(animation != AnimationType.HIT){
                 animation = AnimationType.IDLE;
                 }
@@ -235,6 +255,9 @@ public class Avatar extends Entity implements IAnimation {
     }
 
     public void initAnimation() {
+
+        this.state = 0;
+
         if(animations == null){
             animations = new HashMap<>();
 
